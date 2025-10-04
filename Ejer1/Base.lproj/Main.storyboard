@@ -18,8 +18,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0NE-tH-l0v">
-                                <rect key="frame" x="0.0" y="62" width="402" height="778"/>
+                                <rect key="frame" x="0.0" y="62" width="402" height="812"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZe-dL-nBP">
+                                <rect key="frame" x="346" y="818" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Cnb-AD-UuU"/>
+                                    <constraint firstAttribute="width" secondItem="OZe-dL-nBP" secondAttribute="height" multiplier="1:1" id="hFP-Ch-Wd1"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="w7h-gc-NYS" kind="presentation" id="sYC-pa-NfP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
@@ -27,7 +38,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0NE-tH-l0v" secondAttribute="trailing" id="1fN-qg-AAi"/>
                             <constraint firstItem="0NE-tH-l0v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="62" id="7uU-oo-SRV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0NE-tH-l0v" secondAttribute="bottom" id="PQZ-YV-SVA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OZe-dL-nBP" secondAttribute="bottom" constant="20" id="SwN-Me-OGw"/>
                             <constraint firstItem="0NE-tH-l0v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XZ3-Sp-xgK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OZe-dL-nBP" secondAttribute="trailing" constant="20" id="nCm-ko-XFF"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,11 +48,67 @@
             </objects>
             <point key="canvasLocation" x="53" y="56"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="6Ov-uD-fbK">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="overFullScreen" id="w7h-gc-NYS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nKg-PH-sX3">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2p-SR-mo7">
+                                <rect key="frame" x="0.0" y="52" width="402" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="pBw-Ch-QSb">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="dGR-9P-FS1">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="zUT-fy-duy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hsR-NW-XLP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="trailing" secondItem="hsR-NW-XLP" secondAttribute="trailing" id="04p-ed-qvd"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="trailing" secondItem="hsR-NW-XLP" secondAttribute="trailing" id="6a5-VH-2LN"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="leading" secondItem="hsR-NW-XLP" secondAttribute="leading" id="CNr-t5-sz7"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="top" secondItem="hsR-NW-XLP" secondAttribute="top" constant="20" id="Cmo-44-C7D"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="top" secondItem="hsR-NW-XLP" secondAttribute="top" constant="50" id="FF2-ua-wSJ"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="top" secondItem="hsR-NW-XLP" secondAttribute="top" id="G4L-40-078"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="leading" secondItem="hsR-NW-XLP" secondAttribute="leading" id="IjW-ng-Jgi"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="trailing" secondItem="hsR-NW-XLP" secondAttribute="trailing" id="KtA-kH-rog"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="leading" secondItem="hsR-NW-XLP" secondAttribute="leading" id="UW9-nh-f9d"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="leading" secondItem="hsR-NW-XLP" secondAttribute="leading" id="V6f-iW-80K"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="leading" secondItem="hsR-NW-XLP" secondAttribute="leading" id="XTV-7f-mu5"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="leading" secondItem="hsR-NW-XLP" secondAttribute="leading" id="YrP-xP-Ar1"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="trailing" secondItem="hsR-NW-XLP" secondAttribute="trailing" id="a46-sx-IhK"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="top" secondItem="hsR-NW-XLP" secondAttribute="top" id="eZa-ea-kI6"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="trailing" secondItem="hsR-NW-XLP" secondAttribute="trailing" id="ilz-BV-NIp"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="leading" secondItem="hsR-NW-XLP" secondAttribute="leading" id="ipv-lJ-bxU"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="top" secondItem="hsR-NW-XLP" secondAttribute="top" id="izX-U7-ljA"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="top" secondItem="hsR-NW-XLP" secondAttribute="top" constant="10" id="nCc-u0-KL7"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="top" secondItem="hsR-NW-XLP" secondAttribute="top" id="vdX-zp-hrI"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="trailing" secondItem="hsR-NW-XLP" secondAttribute="trailing" id="veX-Pt-dPd"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="trailing" secondItem="hsR-NW-XLP" secondAttribute="trailing" id="wQA-pl-DK5"/>
+                            <constraint firstItem="V2p-SR-mo7" firstAttribute="top" secondItem="hsR-NW-XLP" secondAttribute="top" id="ymi-lp-ZWJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0y-va-B0C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="56"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Background" width="250" height="360"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
